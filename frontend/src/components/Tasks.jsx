@@ -17,7 +17,7 @@ const Tasks = () => {
 
   function logout(ev) {
     ev.preventDefault();
-    axios.post('http://localhost:5000/logout').then(
+    axios.post(`${process.env.REACT_APP_API_BASE_URL}logout`).then(
       setUserInfo(null)
     )
   }
@@ -31,9 +31,9 @@ const Tasks = () => {
       userId: userInfo.id
     };
 
-    axios.post('http://localhost:5000/generatelist', data)
+    axios.post(`${process.env.REACT_APP_API_BASE_URL}generatelist`, data)
       .then(() => {
-        return axios.get(`http://localhost:5000/lists/${userInfo.id}`);
+        return axios.get(`${process.env.REACT_APP_API_BASE_URL}lists/${userInfo.id}`);
       })
       .then(response => {
         setLists(response.data.taskDoc || []);
@@ -47,7 +47,7 @@ const Tasks = () => {
 
 
   function handleDelete(id) {
-    axios.delete(`http://localhost:5000/list/${id}`).then(() => {
+    axios.delete(`${process.env.REACT_APP_API_BASE_URL}list/${id}`).then(() => {
       setLists(prev => prev.filter(task => task._id !== id));
     });
   }
@@ -60,7 +60,7 @@ const Tasks = () => {
 
 
   function handleUpdate() {
-    axios.put(`http://localhost:5000/list/${editTask._id}`, {
+    axios.put(`${process.env.REACT_APP_API_BASE_URL}list/${editTask._id}`, {
       topic: newTopic,
       content: newContent
     }).then(res => {
@@ -75,7 +75,7 @@ const Tasks = () => {
   }
 
   function handleToggleStatus(id) {
-    axios.put(`http://localhost:5000/list/status/${id}`)
+    axios.put(`${process.env.REACT_APP_API_BASE_URL}list/status/${id}`)
       .then(res => {
         const updated = res.data.updatedTask;
         setLists(prev =>
@@ -90,7 +90,7 @@ const Tasks = () => {
   useEffect(() => {
     if (!userInfo?.id) return;
 
-    axios.get(`http://localhost:5000/lists/${userInfo.id}`)
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}lists/${userInfo.id}`)
       .then(Response => {
         console.log("Fetched data from backend:", Response.data);
         setLists(Response.data.taskDoc || []);

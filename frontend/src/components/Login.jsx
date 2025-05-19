@@ -16,7 +16,10 @@ const Login = () => {
             username,
             password
         }
-        axios.post('http://localhost:5000/login', data).then(Response => {
+        console.log("API BASE URL:", process.env.REACT_APP_API_BASE_URL);
+
+
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}login`, data).then(Response => {
             const token = Response.data.token;
             setUserInfo(Response.data);
             setToken(token)

@@ -14,7 +14,7 @@ const Register = () => {
             username,
             password
         }
-        axios.post('http://localhost:5000/register', data, {
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}register`, data, {
             withCredentials: true
         }).then(Response => {
             setRedirect(true);
