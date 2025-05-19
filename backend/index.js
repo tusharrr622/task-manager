@@ -14,7 +14,7 @@ const secret = 'saesgrfsg415sr';
 
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://task-manager-j1lb.vercel.app'
+    'https://task-manager-lwn5.vercel.app'
 ];
 
 app.use(cors({
