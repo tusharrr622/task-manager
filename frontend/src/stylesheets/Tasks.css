@@ -1,0 +1,226 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 200px 0px 40px 500px;
+}
+
+.container input {
+    padding: 12px 16px;
+    width: 396px;
+    height: 48px;
+    border: 3px solid #D1E9FF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #344054;
+}
+
+.container button {
+    width: 100px;
+    height: 48px;
+    background: #1570EF;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FCFCFD;
+    cursor: pointer;
+}
+
+.list-container {
+    margin: 0px 0px 40px 500px;
+}
+
+.list-container h3 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 76px;
+    height: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #344054;
+    margin-bottom: 20px;
+}
+
+.list-container ul li {
+    white-space: nowrap;
+    width: 76px;
+    height: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #344054;
+    margin-bottom: 20px;
+}
+
+.list-container .toggle-btn {
+    padding: 10px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FCFCFD;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0px 10px 0px 0px;
+}
+
+.list-container .edit-btn {
+    padding: 10px;
+    height: 48px;
+    background: #1570EF;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FCFCFD;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0px 10px 0px 0px;
+}
+
+.list-container .delete-btn {
+    padding: 10px;
+    height: 48px;
+    background: red;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FCFCFD;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0px 10px 0px 0px;
+}
+
+.edit-task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px 0px 0px 500px;
+}
+
+.edit-task-container .new-topic {
+    padding: 12px 16px;
+    width: 396px;
+    height: 48px;
+    border: 3px solid #D1E9FF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #344054;
+}
+
+.edit-task-container .btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-task-container h3 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 76px;
+    height: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #344054;
+
+}
+
+.edit-task-container .new-content {
+    padding: 12px 16px;
+    width: 396px;
+    height: 100px;
+    border: 3px solid #D1E9FF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #344054;
+}
+
+.edit-task-container .save {
+    padding: 10px;
+    width: 100px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FCFCFD;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0px 10px 0px 0px;
+    background: #1570EF;
+}
+
+.edit-task-container .cancel {
+    padding: 10px;
+    width: 100px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FCFCFD;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0px 10px 0px 0px;
+    background: red;
+}
+
+.no-task {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    align-items: center;
+    text-transform: capitalize;
+    color: #344054;
+    margin: 0px 0px 0px 500px;
+}
