@@ -153,6 +153,10 @@ app.put('/list/status/:id', async (req, res) => {
 });
 
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 mongoose.connect(process.env.MONGO_URL).then(
     app.listen(5000, () => {
         console.log(`App is connected database.`)
